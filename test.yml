@@ -19,3 +19,11 @@
     - name: Print the OS family
       debug:
         var: ansible_os_family
+
+    - name: Fetch the current date
+      command: date
+      register: date_output
+
+    - name: Print the current date
+      debug: 
+        var: date_output.stdout
