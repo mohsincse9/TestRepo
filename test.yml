@@ -16,6 +16,7 @@
     # - name: Print the hostname
     #   debug:
     #     var: hostname_output.stdout
+    
     - name: Print the OS family
       debug:
         var: ansible_os_family
