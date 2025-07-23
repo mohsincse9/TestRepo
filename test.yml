@@ -7,12 +7,15 @@
     - name: Show Hostname
       debug:
         var: ansible_hostname
-      register: hostname
+      
 
-    - name Get hostname using command line
-      command: hostname
-      register: hostname_output
+    # - name Get hostname using command line
+    #   command: hostname
+    #   register: hostname_output
 
-    - name: Print the hostname
+    # - name: Print the hostname
+    #   debug:
+    #     var: hostname_output.stdout
+    - name: Print the OS family
       debug:
-        var: hostname_output.stdout
+        var: ansible_os_family
