@@ -9,6 +9,10 @@
         var: ansible_hostname
       register: hostname
 
+    - name Get hostname using command line
+      command: hostname
+      register: hostname_output
+
     - name: Print the hostname
       debug:
-        var: hostname.stdout
+        var: hostname_output.stdout
