@@ -1,8 +1,9 @@
 ---
 - name: Print Hostname of the machine
   hosts: localhost
-  gather_facts: false
+  gather_facts: true
   connection: local
   tasks:
     - name: Show Hostname
-      shell: /usr/bin/hostname
+      debug:
+        var: ansible_hostname
