@@ -7,3 +7,8 @@
     - name: Show Hostname
       debug:
         var: ansible_hostname
+      register: hostname
+
+    - name: Print the hostname
+      debug:
+        var: hostname.stdout
