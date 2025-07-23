@@ -5,4 +5,4 @@
   connection: local
   tasks:
     - name: Show Hostname
-      shell: hostname
+      shell: /usr/bin/hostname
